@@ -1,0 +1,10 @@
+{
+ "stale_after": 30,
+ "hold": 30,
+ "parents": {"pdu": "ups", "r1": "pdu", "r2": "pdu"},
+ "rules": [
+  {"name": "voltage_low", "metric": "voltage", "op": "<", "limit": 180, "clear": 190, "on_delay": 20, "off_delay": 20, "upstream": true},
+  {"name": "inlet_hot", "metric": "inlet_c", "op": ">", "limit": 32.0, "clear": 30.0, "on_delay": 20, "off_delay": 20},
+  {"name": "overcurrent", "metric": "amps", "op": ">", "limit": 25.6, "clear": 24.0, "on_delay": 20, "off_delay": 20}
+ ]
+}
